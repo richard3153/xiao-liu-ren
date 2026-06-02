@@ -22,8 +22,7 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# 临时文件
-*.bat
+# 临时文件（保留启动脚本）
 test_*.py
 diagnose_*.py
 launcher.py
