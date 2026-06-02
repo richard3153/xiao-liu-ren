@@ -18,11 +18,11 @@ import os
 TEXTS = {
     "zh": {
         "title": "🔮 小六壬占卜程序",
-        "subtitle": "— 月起始 → 日走位 → 时落位 —",
+        "subtitle": "- 月起始 → 日走位 → 时落位 -",
         "input_hint": "占卜输入 / Divination Input",
-        "input_label": "请输入要占卜的事情：",
-        "time_prefix": "当前时间：",
-        "shichen_prefix": "时辰：",
+        "input_label": "请输入要占卜的事情:",
+        "time_prefix": "当前时间:",
+        "shichen_prefix": "时辰:",
         "btn_divine": "开始占卜",
         "btn_random": "随机占卜",
         "btn_detail": "查看详解",
@@ -30,24 +30,24 @@ TEXTS = {
         "btn_lang": "Switch to English",
         "tab_process": "推算过程",
         "tab_judgment": "总体判断",
-        "warn_no_question": "请输入要占卜的事情！\nPlease enter a question!",
+        "warn_no_question": "请输入要占卜的事情!\nPlease enter a question!",
         "warn_no_result": "请先进行占卜\nPlease divine first",
         "detail_title": "{0} - 详细解读",
-        "footer": "声明：本程序仅供参考娱乐，不构成任何建议 | For entertainment only",
-        "question": "问题：",
-        "divination_time": "占卜时间：",
-        "step1": "【第一步】月起始（从寅位开始，顺数月数）",
-        "step2": "【第二步】日走位（从月落位开始，顺数日数）",
-        "step3": "【第三步】时落位（从日落位开始，顺数时辰对应的六神序数）",
+        "footer": "声明:本程序仅供参考娱乐,不构成任何建议 | For entertainment only",
+        "question": "问题:",
+        "divination_time": "占卜时间:",
+        "step1": "【第一步】月起始(从寅位开始,顺数月数)",
+        "step2": "【第二步】日走位(从月落位开始,顺数日数)",
+        "step3": "【第三步】时落位(从日落位开始,顺数时辰对应的六神序数)",
         "final_result": "最终结果",
         "result": "结果",
-        "wuxing": "五行：{}",
-        "meaning": "含义：{}",
+        "wuxing": "五行:{}",
+        "meaning": "含义:{}",
         "overall": "【总体判断】",
     },
     "en": {
         "title": "🔮 Xiao Liu Ren Divination",
-        "subtitle": "— Month Start → Day Walk → Hour Land —",
+        "subtitle": "- Month Start → Day Walk → Hour Land -",
         "input_hint": "Divination Input / 占卜输入",
         "input_label": "Enter your question:",
         "time_prefix": "Time: ",
@@ -59,7 +59,7 @@ TEXTS = {
         "btn_lang": "切换到中文",
         "tab_process": "Calculation Process",
         "tab_judgment": "Overall Judgment",
-        "warn_no_question": "Please enter a question!\n请输入要占卜的事情！",
+        "warn_no_question": "Please enter a question!\n请输入要占卜的事情!",
         "warn_no_result": "Please divine first\n请先进行占卜",
         "detail_title": "{0} - Detailed Interpretation",
         "footer": "Disclaimer: For entertainment only | 仅供参考娱乐",
@@ -85,18 +85,18 @@ SPIRITS = {
         "wuxing_zh": "木 (Wood)", "wuxing_en": "Wood",
         "meaning_zh": "安稳、吉祥、静止、守成",
         "meaning_en": "Stable, Auspicious, Still, Maintain",
-        "advice_zh": "此卦象显示事情平稳安定，适合守成等待。\n求财可往西南方，失物不远可自行找回。",
+        "advice_zh": "此卦象显示事情平稳安定,适合守成等待。\n求财可往西南方,失物不远可自行找回。",
         "advice_en": "This hexagram indicates stability. Suitable for maintaining status quo.\nSeek wealth in the SW; lost items are nearby.",
-        "detail_zh": "大安事事昌，求财在坤方，失物去不远，宅舍保安康",
+        "detail_zh": "大安事事昌,求财在坤方,失物去不远,宅舍保安康",
         "detail_en": "Da An: All matters prosper; wealth in SW; lost items nearby; home safe.",
         "aspect_zh": {
-            "career": "事业：平稳发展，适合守成，不宜冒进",
-            "wealth": "财运：求财在坤方（西南方），正财稳定",
-            "love":   "感情：感情稳定，适合维系现有关系",
-            "health": "健康：身体安康，无大碍",
-            "lost":  "失物：失物不远，多在家中或常去之处",
-            "travel": "出行：出行平安，无阻碍",
-            "lawsuit":"官非：官事平缓，无大碍",
+            "career": "事业:平稳发展,适合守成,不宜冒进",
+            "wealth": "财运:求财在坤方(西南方),正财稳定",
+            "love":   "感情:感情稳定,适合维系现有关系",
+            "health": "健康:身体安康,无大碍",
+            "lost":  "失物:失物不远,多在家中或常去之处",
+            "travel": "出行:出行平安,无阻碍",
+            "lawsuit":"官非:官事平缓,无大碍",
         },
         "aspect_en": {
             "career": "Career: Steady development, good for maintaining",
@@ -113,18 +113,18 @@ SPIRITS = {
         "wuxing_zh": "土 (Earth)", "wuxing_en": "Earth",
         "meaning_zh": "纠缠、拖延、犹豫、反复",
         "meaning_en": "Entangled, Delayed, Hesitant, Repeated",
-        "advice_zh": "此卦象显示事情有拖延，需要耐心等待。\n不宜急于求成，官事应缓处理。",
+        "advice_zh": "此卦象显示事情有拖延,需要耐心等待。\n不宜急于求成,官事应缓处理。",
         "advice_en": "This hexagram indicates delay. Patience is needed.\nLegal matters should be handled slowly.",
-        "detail_zh": "留连事难成，求谋日未明，官事只宜缓，去者未回程",
+        "detail_zh": "留连事难成,求谋日未明,官事只宜缓,去者未回程",
         "detail_en": "Liu Lian: Matters hard to complete; plans unclear; legal matters wait.",
         "aspect_zh": {
-            "career": "事业：事情拖延，难以速成，需耐心等待",
-            "wealth": "财运：求财不成，财运平平，不宜投资",
-            "love":  "感情：感情纠缠，有阻碍，需时间化解",
-            "health": "健康：病者拖延，恢复缓慢",
-            "lost":  "失物：失物难寻，多在暗处或被人误拿",
-            "travel": "出行：出行有阻，不宜远行",
-            "lawsuit":"官非：官事拖延，宜缓不宜急",
+            "career": "事业:事情拖延,难以速成,需耐心等待",
+            "wealth": "财运:求财不成,财运平平,不宜投资",
+            "love":  "感情:感情纠缠,有阻碍,需时间化解",
+            "health": "健康:病者拖延,恢复缓慢",
+            "lost":  "失物:失物难寻,多在暗处或被人误拿",
+            "travel": "出行:出行有阻,不宜远行",
+            "lawsuit":"官非:官事拖延,宜缓不宜急",
         },
         "aspect_en": {
             "career": "Career: Matters delayed, hard to complete quickly",
@@ -141,18 +141,18 @@ SPIRITS = {
         "wuxing_zh": "火 (Fire)", "wuxing_en": "Fire",
         "meaning_zh": "喜庆、快速、成功、光明",
         "meaning_en": "Joyful, Fast, Successful, Bright",
-        "advice_zh": "此卦象显示喜事临近，事情会快速解决。\n求财可往南方，失物可在午时找到。",
+        "advice_zh": "此卦象显示喜事临近,事情会快速解决。\n求财可往南方,失物可在午时找到。",
         "advice_en": "This hexagram indicates good news is coming, matters resolve quickly.\nSeek wealth in the South; lost items found at noon.",
-        "detail_zh": "速喜喜来临，求财向南行，失物申未午，逢人路上寻",
+        "detail_zh": "速喜喜来临,求财向南行,失物申未午,逢人路上寻",
         "detail_en": "Su Xi: Joy is coming; seek wealth in the South; ask people on the road.",
         "aspect_zh": {
-            "career": "事业：喜事临近，事业快速成功，有贵人相助",
-            "wealth": "财运：求财向南行（南方），财运亨通",
-            "love":  "感情：感情喜庆，有喜讯传来",
-            "health": "健康：病者快速康复，身体健康",
-            "lost":  "失物：失物在南方，午时（11-13点）可寻回",
-            "travel": "出行：出行顺利，有喜事",
-            "lawsuit":"官非：官事快速解决，有贵人相助",
+            "career": "事业:喜事临近,事业快速成功,有贵人相助",
+            "wealth": "财运:求财向南行(南方),财运亨通",
+            "love":  "感情:感情喜庆,有喜讯传来",
+            "health": "健康:病者快速康复,身体健康",
+            "lost":  "失物:失物在南方,午时(11-13点)可寻回",
+            "travel": "出行:出行顺利,有喜事",
+            "lawsuit":"官非:官事快速解决,有贵人相助",
         },
         "aspect_en": {
             "career": "Career: Good news coming, career success fast, help available",
@@ -169,18 +169,18 @@ SPIRITS = {
         "wuxing_zh": "金 (Metal)", "wuxing_en": "Metal",
         "meaning_zh": "口舌、凶险、争执、疾病",
         "meaning_en": "Conflict, Danger, Dispute, Illness",
-        "advice_zh": "此卦象显示有口舌是非，需防官非疾病。\n失物应尽快寻找，出行小心谨慎。",
+        "advice_zh": "此卦象显示有口舌是非,需防官非疾病。\n失物应尽快寻找,出行小心谨慎。",
         "advice_en": "This hexagram indicates conflict and danger. Beware of lawsuits and illness.\nLost items should be sought quickly; travel with caution.",
-        "detail_zh": "赤口主口伤，官事且紧防，失物急去寻，行人有惊慌",
+        "detail_zh": "赤口主口伤,官事且紧防,失物急去寻,行人有惊慌",
         "detail_en": "Chi Kou: Mainly conflict; beware of lawsuits; seek lost items urgently.",
         "aspect_zh": {
-            "career": "事业：有口舌是非，需防小人，不宜妄动",
-            "wealth": "财运：求财无利，且有破财之虞",
-            "love":  "感情：感情有口舌，争执多，需忍让",
-            "health": "健康：病者有险，需防病情加重",
-            "lost":  "失物：失物在西方，需急寻，否则难找回",
-            "travel": "出行：出行有险，需小心谨慎",
-            "lawsuit":"官非：官事凶险，需紧防，宜和解",
+            "career": "事业:有口舌是非,需防小人,不宜妄动",
+            "wealth": "财运:求财无利,且有破财之虞",
+            "love":  "感情:感情有口舌,争执多,需忍让",
+            "health": "健康:病者有险,需防病情加重",
+            "lost":  "失物:失物在西方,需急寻,否则难找回",
+            "travel": "出行:出行有险,需小心谨慎",
+            "lawsuit":"官非:官事凶险,需紧防,宜和解",
         },
         "aspect_en": {
             "career": "Career: Have conflict disputes, beware of villains",
@@ -197,18 +197,18 @@ SPIRITS = {
         "wuxing_zh": "水 (Water)", "wuxing_en": "Water",
         "meaning_zh": "和合、顺利、喜悦、婚姻",
         "meaning_en": "Harmony, Smooth, Joy, Marriage",
-        "advice_zh": "此卦象显示和合顺利，有喜事临门。\n婚姻和合，求财有利，失物在西南方。",
+        "advice_zh": "此卦象显示和合顺利,有喜事临门。\n婚姻和合,求财有利,失物在西南方。",
         "advice_en": "This hexagram indicates harmony and smoothness, good fortune arrives.\nMarriage is harmonious, wealth seeking is favorable.",
-        "detail_zh": "小吉最吉昌，路上好商量，阴人来报喜，失物在坤方",
+        "detail_zh": "小吉最吉昌,路上好商量,阴人来报喜,失物在坤方",
         "detail_en": "Xiao Ji: Most auspicious; good for negotiation; someone brings good news.",
         "aspect_zh": {
-            "career": "事业：和合顺利，有人相助，事业吉昌",
-            "wealth": "财运：求财有利，财运亨通，多有意外之财",
-            "love":  "感情：婚姻和合，感情顺利，有喜事",
-            "health": "健康：身体康健，病者易愈",
-            "lost":  "失物：失物在坤方（西南方），可寻回",
-            "travel": "出行：出行顺利，得顺风，有贵人相助",
-            "lawsuit":"官非：官事和解，无大碍",
+            "career": "事业:和合顺利,有人相助,事业吉昌",
+            "wealth": "财运:求财有利,财运亨通,多有意外之财",
+            "love":  "感情:婚姻和合,感情顺利,有喜事",
+            "health": "健康:身体康健,病者易愈",
+            "lost":  "失物:失物在坤方(西南方),可寻回",
+            "travel": "出行:出行顺利,得顺风,有贵人相助",
+            "lawsuit":"官非:官事和解,无大碍",
         },
         "aspect_en": {
             "career": "Career: Harmonious and smooth, someone helps, career auspicious",
@@ -225,18 +225,18 @@ SPIRITS = {
         "wuxing_zh": "土 (Earth)", "wuxing_en": "Earth",
         "meaning_zh": "虚空、失败、消散、疾病",
         "meaning_en": "Empty, Failure, Dispersed, Illness",
-        "advice_zh": "此卦象显示事情落空，需要重新规划。\n求财无利，出行有灾，宜守不宜进。",
+        "advice_zh": "此卦象显示事情落空,需要重新规划。\n求财无利,出行有灾,宜守不宜进。",
         "advice_en": "This hexagram indicates matters falling through, need to replan.\nWealth seeking unfavorable, travel has disasters.",
-        "detail_zh": "空亡事不祥，阴人多乖张，求财无利益，行人有灾殃",
+        "detail_zh": "空亡事不祥,阴人多乖张,求财无利益,行人有灾殃",
         "detail_en": "Kong Wang: Matters inauspicious; people stubborn; wealth no benefit.",
         "aspect_zh": {
-            "career": "事业：事情落空，谋划无成，需重新规划",
-            "wealth": "财运：求财无利，且有破财之虞，不宜投资",
-            "love":  "感情：感情空虚，有分离之象",
-            "health": "健康：病者加重，需防不治之症",
-            "lost":  "失物：失物难寻，多已消散或被人拿走",
-            "travel": "出行：出行有灾，不宜远行",
-            "lawsuit":"官非：官事凶险，有牢狱之灾",
+            "career": "事业:事情落空,谋划无成,需重新规划",
+            "wealth": "财运:求财无利,且有破财之虞,不宜投资",
+            "love":  "感情:感情空虚,有分离之象",
+            "health": "健康:病者加重,需防不治之症",
+            "lost":  "失物:失物难寻,多已消散或被人拿走",
+            "travel": "出行:出行有灾,不宜远行",
+            "lawsuit":"官非:官事凶险,有牢狱之灾",
         },
         "aspect_en": {
             "career": "Career: Matters fall through, plans fail, need replanning",
@@ -262,28 +262,43 @@ class XiaoLiuRen:
         self.month_map = {1:"大安", 2:"留连", 3:"速喜",
                          4:"赤口", 5:"小吉", 6:"空亡"}
 
-    def get_month_position(self, month):
+    def get_month_position(self, month, lang="zh"):
         """月起始 | Month Start"""
         key = (month - 1) % 6 + 1
         pos = self.month_map[key]
-        return {"step": "月起始", "month": month, "position": pos}
+        pos_en = SPIRITS[pos]["en"]
+        return {"step": "月起始" if lang == "zh" else "Month Start",
+                "month": month,
+                "position": pos,
+                "position_en": pos_en}
 
-    def get_day_position(self, start_pos, day):
+    def get_day_position(self, start_pos, day, lang="zh"):
         """日走位 | Day Walk"""
         start_index = self.positions.index(start_pos)
         current_index = start_index
-        process = [f"起点：{start_pos}（位置{start_index+1}）"]
-        for i in range(day - 1):
-            old_index = current_index
-            current_index = (current_index + 1) % 6
-            process.append(
-                f"第{i+1}步：{self.positions[old_index]} → {self.positions[current_index]}"
-            )
+        if lang == "en":
+            process = [f"Start: {SPIRITS[start_pos]['en']} (pos {start_index+1})"]
+            for i in range(day - 1):
+                old_index = current_index
+                current_index = (current_index + 1) % 6
+                process.append(
+                    f"Step {i+1}: {SPIRITS[self.positions[old_index]]['en']} -> {SPIRITS[self.positions[current_index]]['en']}"
+                )
+        else:
+            process = [f"起点:{start_pos}(位置{start_index+1})"]
+            for i in range(day - 1):
+                old_index = current_index
+                current_index = (current_index + 1) % 6
+                process.append(
+                    f"第{i+1}步:{self.positions[old_index]} → {self.positions[current_index]}"
+                )
         return {
-            "step": "日走位",
+            "step": "日走位" if lang == "zh" else "Day Walk",
             "start_position": start_pos,
+            "start_position_en": SPIRITS[start_pos]["en"],
             "day": day,
             "result_position": self.positions[current_index],
+            "result_position_en": SPIRITS[self.positions[current_index]]["en"],
             "process": process,
         }
 
@@ -299,9 +314,9 @@ class XiaoLiuRen:
             "Chen (7-9)", "Si (9-11)", "Wu (11-13)", "Wei (13-15)",
             "Shen (15-17)", "You (17-19)", "Xu (19-21)", "Hai (21-23)"
         ]
-        # 时辰对应六神（12时辰 → 6神循环2圈）
-        # 子→大安，丑→留连，寅→速喜，卯→赤口，辰→小吉，巳→空亡
-        # 午→大安，未→留连，申→速喜，酉→赤口，戌→小吉，亥→空亡
+        # 时辰对应六神(12时辰 → 6神循环2圈)
+        # 子→大安,丑→留连,寅→速喜,卯→赤口,辰→小吉,巳→空亡
+        # 午→大安,未→留连,申→速喜,酉→赤口,戌→小吉,亥→空亡
         hour_to_spirit = [
             "大安", "留连", "速喜", "赤口", "小吉", "空亡",
             "大安", "留连", "速喜", "赤口", "小吉", "空亡"
@@ -312,27 +327,37 @@ class XiaoLiuRen:
         spirit = hour_to_spirit[idx]
         return shichen_zh, shichen_en, spirit
 
-    def get_hour_position(self, day_pos, hour):
+    def get_hour_position(self, day_pos, hour, lang="zh"):
         """时落位 | Hour Land"""
         _, _, hour_spirit = self.get_hour_shichen(hour)
         day_index = self.positions.index(day_pos)
         hour_index = self.positions.index(hour_spirit)
         final_index = (day_index + hour_index) % 6
 
-        process = [
-            f"日期位置：{day_pos}（位置{day_index+1}）",
-            f"时辰对应：{hour}时 → {hour_spirit}（位置{hour_index+1}）",
-            f"推算：{day_pos}（{day_index+1}）+ {hour_spirit}（{hour_index+1}）→ {self.positions[final_index]}（{final_index+1}）"
-        ]
+        if lang == "en":
+            process = [
+                f"Day position: {SPIRITS[day_pos]['en']} (pos {day_index+1})",
+                f"Hour corresponds to: {hour} -> {SPIRITS[hour_spirit]['en']} (pos {hour_index+1})",
+                f"Calculate: {SPIRITS[day_pos]['en']} ({day_index+1}) + {SPIRITS[hour_spirit]['en']} ({hour_index+1}) -> {SPIRITS[self.positions[final_index]]['en']} ({final_index+1})"
+            ]
+        else:
+            process = [
+                f"日期位置:{day_pos}(位置{day_index+1})",
+                f"时辰对应:{hour}时 → {hour_spirit}(位置{hour_index+1})",
+                f"推算:{day_pos}({day_index+1})+ {hour_spirit}({hour_index+1})→ {self.positions[final_index]}({final_index+1})"
+            ]
 
         shichen_zh, shichen_en, _ = self.get_hour_shichen(hour)
 
         return {
-            "step": "时落位",
+            "step": "时落位" if lang == "zh" else "Hour Land",
             "day_position": day_pos,
+            "day_position_en": SPIRITS[day_pos]["en"],
             "hour": hour,
             "hour_position": hour_spirit,
+            "hour_position_en": SPIRITS[hour_spirit]["en"],
             "final_position": self.positions[final_index],
+            "final_position_en": SPIRITS[self.positions[final_index]]["en"],
             "process": process,
             "shichen_zh": shichen_zh,
             "shichen_en": shichen_en,
@@ -345,42 +370,9 @@ class XiaoLiuRen:
         day = day if day is not None else now.day
         hour = hour if hour is not None else now.hour
 
-        step1 = self.get_month_position(month)
-        step2 = self.get_day_position(step1["position"], day)
-        step3 = self.get_hour_position(step2["result_position"], hour)
-        
-        # Add English position names to all step dicts
-        step1["position_en"] = SPIRITS[step1["position"]]["en"]
-        step2["start_position_en"] = SPIRITS[step2["start_position"]]["en"]
-        step2["result_position_en"] = SPIRITS[step2["result_position"]]["en"]
-        step3["day_position_en"] = SPIRITS[step3["day_position"]]["en"]
-        step3["hour_position_en"] = SPIRITS[step3["hour_position"]]["en"]
-        step3["final_position_en"] = SPIRITS[step3["final_position"]]["en"]
-        
-        if lang == "en":
-            # Regenerate step2 process text in English
-            start_pos = step2["start_position"]
-            start_index = self.positions.index(start_pos)
-            current_index = start_index
-            process = [f"Start: {SPIRITS[start_pos]['en']} (pos {start_index+1})"]
-            for i in range(day - 1):
-                old_index = current_index
-                current_index = (current_index + 1) % 6
-                process.append(f"Step {i+1}: {SPIRITS[self.positions[old_index]]['en']} -> {SPIRITS[self.positions[current_index]]['en']}")
-            step2["process"] = process
-            
-            # Regenerate step3 process text in English
-            day_pos = step3["day_position"]
-            hour_spirit = step3["hour_position"]
-            day_idx = self.positions.index(day_pos)
-            hour_idx = self.positions.index(hour_spirit)
-            final_idx = (day_idx + hour_idx) % 6
-            process = [
-                f"Day position: {SPIRITS[day_pos]['en']} (pos {day_idx+1})",
-                f"Hour corresponds to: {hour} -> {SPIRITS[hour_spirit]['en']} (pos {hour_idx+1})",
-                f"Calculate: {SPIRITS[day_pos]['en']} ({day_idx+1}) + {SPIRITS[hour_spirit]['en']} ({hour_idx+1}) -> {SPIRITS[self.positions[final_idx]]['en']} ({final_idx+1})"
-            ]
-            step3["process"] = process
+        step1 = self.get_month_position(month, lang=lang)
+        step2 = self.get_day_position(step1["position"], day, lang=lang)
+        step3 = self.get_hour_position(step2["result_position"], hour, lang=lang)
 
         shichen_zh, shichen_en, _ = self.get_hour_shichen(hour)
 
@@ -517,12 +509,22 @@ class DivinationGUI:
         self.notebook.tab(0, text=self.t('tab_process'))
         self.notebook.tab(1, text=self.t('tab_judgment'))
         self.footer_label.config(text=self.t('footer'))
-        if self.current_result:
-            self._display_result(self.current_result)
+        # 不再自动重显，由 toggle_lang 负责 | No auto redisplay, handled by toggle_lang
 
     def toggle_lang(self):
         self.lang = 'en' if self.lang == 'zh' else 'zh'
+        # 如果已有结果，用新语言重新占卜 | Re-divine with new lang if result exists
+        if self.current_result:
+            question = self.current_result['question']
+            month = self.current_result.get('lunar_month')
+            day = self.current_result.get('lunar_day')
+            hour = self.current_result.get('hour')
+            self.current_result = self.diviner.divine_with_steps(
+                question, self.lang, month=month, day=day, hour=hour
+            )
         self.update_ui_text()
+        if self.current_result:
+            self._display_result(self.current_result)
 
     def update_time(self):
         now = datetime.now()
