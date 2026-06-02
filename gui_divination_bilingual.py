@@ -34,6 +34,16 @@ TEXTS = {
         "warn_no_result": "请先进行占卜\nPlease divine first",
         "detail_title": "{0} - 详细解读",
         "footer": "声明：本程序仅供参考娱乐，不构成任何建议 | For entertainment only",
+        "question": "问题：",
+        "divination_time": "占卜时间：",
+        "step1": "【第一步】月起始（从寅位开始，顺数月数）",
+        "step2": "【第二步】日走位（从月落位开始，顺数日数）",
+        "step3": "【第三步】时落位（从日落位开始，顺数时辰对应的六神序数）",
+        "final_result": "最终结果",
+        "result": "结果",
+        "wuxing": "五行：{}",
+        "meaning": "含义：{}",
+        "overall": "【总体判断】",
     },
     "en": {
         "title": "🔮 Xiao Liu Ren Divination",
@@ -53,6 +63,16 @@ TEXTS = {
         "warn_no_result": "Please divine first\n请先进行占卜",
         "detail_title": "{0} - Detailed Interpretation",
         "footer": "Disclaimer: For entertainment only | 仅供参考娱乐",
+        "question": "Question: ",
+        "divination_time": "Divination Time: ",
+        "step1": "[Step 1] Month Start (count from Yin position)",
+        "step2": "[Step 2] Day Walk (walk from month position)",
+        "step3": "[Step 3] Hour Land (walk from day position)",
+        "final_result": "Final Result",
+        "result": "Result",
+        "wuxing": "Element: {}",
+        "meaning": "Meaning: {}",
+        "overall": "[Overall Judgment]",
     }
 }
 
@@ -328,6 +348,39 @@ class XiaoLiuRen:
         step1 = self.get_month_position(month)
         step2 = self.get_day_position(step1["position"], day)
         step3 = self.get_hour_position(step2["result_position"], hour)
+        
+        # Add English position names to all step dicts
+        step1["position_en"] = SPIRITS[step1["position"]]["en"]
+        step2["start_position_en"] = SPIRITS[step2["start_position"]]["en"]
+        step2["result_position_en"] = SPIRITS[step2["result_position"]]["en"]
+        step3["day_position_en"] = SPIRITS[step3["day_position"]]["en"]
+        step3["hour_position_en"] = SPIRITS[step3["hour_position"]]["en"]
+        step3["final_position_en"] = SPIRITS[step3["final_position"]]["en"]
+        
+        if lang == "en":
+            # Regenerate step2 process text in English
+            start_pos = step2["start_position"]
+            start_index = self.positions.index(start_pos)
+            current_index = start_index
+            process = [f"Start: {SPIRITS[start_pos]['en']} (pos {start_index+1})"]
+            for i in range(day - 1):
+                old_index = current_index
+                current_index = (current_index + 1) % 6
+                process.append(f"Step {i+1}: {SPIRITS[self.positions[old_index]]['en']} -> {SPIRITS[self.positions[current_index]]['en']}")
+            step2["process"] = process
+            
+            # Regenerate step3 process text in English
+            day_pos = step3["day_position"]
+            hour_spirit = step3["hour_position"]
+            day_idx = self.positions.index(day_pos)
+            hour_idx = self.positions.index(hour_spirit)
+            final_idx = (day_idx + hour_idx) % 6
+            process = [
+                f"Day position: {SPIRITS[day_pos]['en']} (pos {day_idx+1})",
+                f"Hour corresponds to: {hour} -> {SPIRITS[hour_spirit]['en']} (pos {hour_idx+1})",
+                f"Calculate: {SPIRITS[day_pos]['en']} ({day_idx+1}) + {SPIRITS[hour_spirit]['en']} ({hour_idx+1}) -> {SPIRITS[self.positions[final_idx]]['en']} ({final_idx+1})"
+            ]
+            step3["process"] = process
 
         shichen_zh, shichen_en, _ = self.get_hour_shichen(hour)
 
@@ -510,7 +563,8 @@ class DivinationGUI:
         lines.append('=' * 60)
         lines.append(T('question') + r['question'])
         lines.append(T('divination_time') + r['divination_time'])
-        lines.append('Lunar: {}月{}日  {} {}'.format(r['lunar_month'], r['lunar_day'], r.get('shichen_zh',''), r.get('shichen_en','')))
+        shi_disp = r.get('shichen_en','') if lang == 'en' else r.get('shichen_zh','')
+        lines.append('Lunar: {}月{}日  {}'.format(r['lunar_month'], r['lunar_day'], shi_disp))
         lines.append('=' * 60)
         lines.append('')
 
@@ -518,11 +572,13 @@ class DivinationGUI:
         if s:
             lines.append(T('step1'))
             lines.append('-' * 40)
-            lines.append('Month {} -> [{}]'.format(r['lunar_month'], s['step1']['position']))
+            pos1 = s['step1']['position_en'] if lang == 'en' else s['step1']['position']
+            lines.append('Month {} -> [{}]'.format(r['lunar_month'], pos1))
             lines.append('')
             lines.append(T('step2'))
             lines.append('-' * 40)
-            lines.append('From [{}] walk {} steps:'.format(s['step2']['start_position'], r['lunar_day']))
+            start2 = s['step2']['start_position_en'] if lang == 'en' else s['step2']['start_position']
+            lines.append('From [{}] walk {} steps:'.format(start2, r['lunar_day']))
             for p in s['step2']['process']:
                 lines.append('  ' + p)
             lines.append('')
